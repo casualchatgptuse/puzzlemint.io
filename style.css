@@ -1,0 +1,183 @@
+/* ----------------------------
+   기본 초기화 및 전역 스타일
+----------------------------- */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Helvetica Neue', sans-serif;
+    color: white;
+}
+
+/* 메인 페이지에서 스크롤 제거 */
+body {
+    overflow: hidden;
+}
+
+/* ----------------------------
+   헤더 및 네비게이션 스타일
+----------------------------- */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 40px;
+    background-color: rgba(135, 206, 250, 0.3); /* 연한 하늘색 투명 배경 */
+    box-sizing: border-box;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    backdrop-filter: blur(6px); /* 블러 효과로 유리 느낌 */
+}
+
+/* nav를 3영역 구조로 정렬: 좌측 아이콘 - 중앙 로고 - 우측 메뉴 */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: relative; /* 중앙 로고 정렬 기준 */
+}
+
+/* ----------------------------
+   중앙 텍스트 로고 스타일
+----------------------------- */
+.logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 50px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: rgb(180, 255, 230); /* 밝은 민트색 */
+    text-transform: uppercase;
+    text-shadow: 
+        0 0 8px rgba(149, 234, 214, 0.6), /* 민트빛 글로우 */
+        0 0 16px rgba(118, 255, 223, 0.4);
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.logo:hover {
+    color: #e0f7ff;
+    text-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+}
+
+/* ----------------------------
+   좌측 스토어 아이콘 스타일
+----------------------------- */
+.store-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    flex-shrink: 0;
+    margin-right: 30px;
+}
+
+.store-icon img {
+    display: block;
+    transition: opacity 0.3s;
+}
+
+.store-icon:hover img {
+    opacity: 0.7;
+}
+
+/* ----------------------------
+   우측 메뉴 및 언어 선택
+----------------------------- */
+.header-right-menu {
+    display: flex;
+    align-items: center;
+}
+
+/* 메뉴 리스트 */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav li {
+    margin-left: 30px;
+}
+
+/* 메뉴 링크 */
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s;
+    white-space: nowrap;
+}
+
+nav a:hover {
+    color: #cccccc;
+}
+
+/* ----------------------------
+   언어 선택 메뉴 스타일
+----------------------------- */
+.lang-switcher {
+    margin-left: 40px;
+    border-left: 1px solid #ffffff50;
+    padding-left: 20px;
+}
+
+.lang-switcher li {
+    margin-left: 15px;
+}
+
+.lang-switcher a {
+    text-decoration: none;
+    color: #ffffff80;
+    font-size: 14px;
+    font-weight: bold;
+    transition: color 0.3s;
+    white-space: nowrap;
+}
+
+.lang-switcher a.active {
+    color: #fff;
+}
+
+.lang-switcher a:hover {
+    color: #fff;
+}
+
+/* ----------------------------
+   메인 배경 이미지
+----------------------------- */
+.main-background {
+    height: 100vh;
+    background-image: url('images/main-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* ----------------------------
+   개인정보 처리방침 페이지 전용
+----------------------------- */
+.privacy-page {
+    overflow: auto !important;
+    color: #333;
+    background: #fff;
+    padding-top: 80px; /* 헤더 높이 보정 */
+}
+
+.privacy-container {
+    max-width: 800px;
+    margin: 20px auto 40px auto;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.privacy-container h1 {
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
